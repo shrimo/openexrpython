@@ -6,7 +6,7 @@ from os import system
 
 from distutils.core import setup, Extension
 
-version = "1.3.2"
+version = "2.3.2"
 setup(name='OpenEXR',
   author = 'James Bowman',
   author_email = 'jamesb@excamera.com',
@@ -19,8 +19,8 @@ setup(name='OpenEXR',
               ['OpenEXR.cpp'],
               include_dirs=['/usr/include/OpenEXR', '/usr/local/include/OpenEXR', '/opt/local/include/OpenEXR'],
               library_dirs=['/usr/local/lib', '/opt/local/lib'],
-              libraries=['Iex', 'Half', 'Imath', 'IlmImf', 'z'],
+              libraries=['Iex-2_3', 'Half-2_3', 'Imath-2_3', 'IlmImf-2_3', 'z'],
               extra_compile_args=['-g', '-DVERSION="%s"' % version])
   ],
-  py_modules=['Imath'],
+  py_modules=['other_imath'],
 )
