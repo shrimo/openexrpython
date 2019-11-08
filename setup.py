@@ -18,9 +18,9 @@ setup(name='OpenEXR',
     Extension('OpenEXR',
               ['OpenEXR.cpp'],
               include_dirs=['/usr/include/OpenEXR', '/usr/local/include/OpenEXR', '/opt/local/include/OpenEXR'],
-              library_dirs=['/usr/local/lib', '/opt/local/lib'],
-              libraries=['Iex-2_3', 'Half-2_3', 'Imath-2_3', 'IlmImf-2_3', 'z'],
+              library_dirs=['/usr/local/lib', '/usr/local/lib64'],
+              libraries=['Iex-2_4', 'Half-2_4', 'Imath-2_4', 'IlmImf-2_4', 'z'],
               extra_compile_args=['-g', '-DVERSION="%s"' % version])
   ],
-  py_modules=['other_imath'],
+  py_modules=['EImath'],
 )

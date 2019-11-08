@@ -1213,7 +1213,7 @@ MOD_INIT(OpenEXR)
     MOD_DEF(m, "OpenEXR", "", methods)
     d = PyModule_GetDict(m);
 
-    pModuleImath = PyImport_ImportModule("other_imath");
+    pModuleImath = PyImport_ImportModule("EImath");
 
     /* initialize module variables/constants */
     InputFile_Type.tp_new = PyType_GenericNew;
